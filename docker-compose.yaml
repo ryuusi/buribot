@@ -1,0 +1,25 @@
+version: '3'
+services:
+  bot:
+    build: 
+      context: ./bot
+      args:
+        - HOST=mcserver
+    depends_on: 
+        - mcserver
+    ports: 
+        - 127.0.0.1:3007:3007
+    restart: always
+    environment: 
+      - HOST=mcserver
+    volumes: 
+      - ./bot/mineflayer/:/usr/app/bot
+
+  mcserver:
+    image: itzg/minecraft-server:latest
+    ports: 
+        - 127.0.0.1:25565:25565
+    environment: 
+        - EULA=true
+    volumes: 
+      - ./server_data:/data

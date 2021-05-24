@@ -1,0 +1,23 @@
+{
+  "name": "buriuni",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "mineflayer": "^3.6.0",
+    "prismarine-viewer": "^1.19.3"
+  },
+  "devDependencies": {
+    "jsdom": "^16.5.3",
+    "mocha": "^8.4.0",
+    "node-fetch": "^2.6.1"
+  },
+  "type": "module"
+}
